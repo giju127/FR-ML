@@ -121,6 +121,8 @@ cumreto = ret.cumsum()
 plt.figure(figsize=(20,8))
 sns.lineplot(data=cumreto, dashes=False)
 
+# Imputation only
+
 for j in tqdm(range(14)): # Number of NAs: 0 to 13
 
   na = ret.copy()
@@ -145,6 +147,8 @@ for j in tqdm(range(14)): # Number of NAs: 0 to 13
 
   plt.figure(figsize=(20,8))
   sns.lineplot(data=cumret, dashes=False).set_title('NaN = {}'.format(j))
+
+# Interpolation + Imputation
 
 for j in tqdm(range(14)):
 
